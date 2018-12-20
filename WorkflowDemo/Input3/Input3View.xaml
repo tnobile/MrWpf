@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="WorkflowDemo.Model.Input3View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Background="#FF69F905">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0">Input 3/1</Label>
+        <TextBox Grid.Row="1" Name="Input3Field1" Margin="0,0,0,10"/>
+        <Label Grid.Row="2">Input 3/2</Label>
+        <TextBox Grid.Row="3" Name="Input3Field2" Margin="0,0,0,10"/>
+        <Button Grid.Row="4" Name="Next" Content="Next" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,70,10" Padding="5,2,5,2" IsDefault="True"/>
+        <Button Grid.Row="4" Name="Cancel" Content="Cancel" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,10" Padding="5,2,5,2"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,10 @@
+﻿<Window x:Class="WorkflowDemo.Model.ApplicationControllerView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="400" Width="350"
+        ResizeMode="NoResize">
+    <StackPanel>
+        <ContentControl x:Name="ActiveItem" VerticalAlignment="Stretch" Height="362" />
+    </StackPanel>
+</Window>
+    
