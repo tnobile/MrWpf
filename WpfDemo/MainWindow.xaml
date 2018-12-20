@@ -1,0 +1,34 @@
+﻿<Controls:MetroWindow x:Class="WpfDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"                      
+        Title="MainWindow" Height="600" Width="1025">
+    <Controls:MetroWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="View/Dictionary1.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Controls:MetroWindow.Resources>
+    <TabControl>
+        <TabItem Header="Reactive">
+            <DockPanel>
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+                    <TextBox Text="{Binding CurrentText.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="100"/>
+                    <TextBlock Text="{Binding DisplayText.Value}" TextAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+                    <Button Content="Start" Command="{Binding Start}" Style="{StaticResource AccentedSquareButtonStyle}"/>
+                    <Button Content="Stop" Command="{Binding Stop}" Style="{StaticResource AccentedSquareButtonStyle}"/>
+
+                    <Button Content="Clear" Command="{Binding Clear}" Style="{StaticResource AccentedSquareButtonStyle}"/>
+                    <Button Content="Switch" Command="{Binding Switch}" Style="{StaticResource AccentedSquareButtonStyle}"/>
+                </StackPanel>
+                <ListView ItemsSource="{Binding DualMessages}" x:Name="mylistview"/>
+            </DockPanel>
+        </TabItem>
+        <TabItem Header="what">
+            <ContentControl Content="{Binding MyCollectionViewModel}"/>
+        </TabItem>
+    </TabControl>
+</Controls:MetroWindow>
