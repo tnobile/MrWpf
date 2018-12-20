@@ -10,7 +10,7 @@
 
 .vs/
 .nuget/
-packages/*
+packages/
 
 # Build results
 [Dd]ebug/
