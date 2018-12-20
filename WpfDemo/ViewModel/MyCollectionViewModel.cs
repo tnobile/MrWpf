@@ -55,7 +55,7 @@ namespace WpfDemo.ViewModel
             // IObservaboe<T>からコレクションへ変換。オプションとしてコレクションをリセットするIO<Unit>を渡せる
             this.SimpleCollection = this.source.ToReadOnlyReactiveCollection(this.SimpleResetCommand.ToUnit());
 
-            this.CollectionChangedCollection = this.collectionChangedSource.ToReadOnlyReactiveCollection();
+            //this.CollectionChangedCollection = this.collectionChangedSource.ToReadOnlyReactiveCollection();
             this.CollectionChangedAddCommand = new ReactiveCommand();
             this.CollectionChangedAddCommand.Subscribe(_ =>
                 {
